@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "'mocha'"
+    "test": "mocha --timeout 30000"
   },
   "repository": {
     "type": "git",
@@ -18,7 +18,6 @@
   "homepage": "https://github.com/mysteryt0ur/TodoAPITest#readme",
   "dependencies": {
     "chai": "^4.2.0",
-    "express": "^4.16.4",
     "mocha": "^5.2.0",
     "superagent": "^4.0.0-beta.5",
     "supertest": "^3.3.0"
