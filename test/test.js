@@ -24,7 +24,14 @@ describe('GET /todos/', function() {
         due: '1999-04-11T00:00:00.000Z',
         notes: ''
       })
-      .end(done) 
-  })
-})
+      .end(done)
 
+    })
+
+      it('Get an individual todo using a minus ID number', function(done){
+        api
+          .get('/todos/-452')
+          .expect(404)
+          .end(done)
+      })
+})
