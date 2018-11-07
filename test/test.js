@@ -26,5 +26,20 @@ describe('GET /todos/', function() {
       })
       .end(done) 
   })
-})
 
+describe('POST /todos/', function() {
+
+  it('Add a new todo, providing all the correct details', function(done) {
+    api
+      .post("/todos?title=Go%20to%20The%20Cavern%20in%20Liverpool&due=2018-11-08&notes=''")
+      .expect(201)
+      .expect({
+        title:
+        'Go to The Cavern in Liverpool',
+        due: '2018-11-08T00:00:00.000Z',
+        notes: ''
+      })
+      .end(done)
+    })
+  })
+})
