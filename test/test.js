@@ -25,6 +25,14 @@ describe('GET /todos/', function() {
         notes: ''
       })
       .end(done) 
+    })
+
+    it('Get an individual todo using a minus ID number', function(done){
+      api
+        .get('/todos/-452')
+        .expect(404)
+        .end(done)
+      })
   })
 
 describe('POST /todos/', function() {
@@ -41,5 +49,4 @@ describe('POST /todos/', function() {
       })
       .end(done)
     })
-  })
 })
